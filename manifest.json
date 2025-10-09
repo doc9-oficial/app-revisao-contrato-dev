@@ -1,0 +1,67 @@
+{
+    "name": "app-revisao-contrato-dev",
+    "version": "1.0.0",
+    "description": "Revisão de Contrato – Which AI: Revisa contratos destacando inconsistências e sugerindo melhorias",
+    "auth": {
+        "description": {
+            "title": "Configuração de Acesso",
+            "body": "Configure suas credenciais para acessar o serviço.",
+            "footer": "As credenciais são armazenadas com segurança.",
+            "link": ""
+        },
+        "params": [            {
+                "name": "whomToken",
+                "type": "string",
+                "inputType": "text",
+                "required": true,
+                "label": "Token do Whom"
+            },
+            {
+                "name": "whomExtensionId",
+                "type": "string",
+                "inputType": "text",
+                "required": true,
+                "label": "ID da Extensão do Whom"
+            }        
+        ]
+    },
+    "functions": {
+        "revisarContrato": {
+            "script": "dist/revisarContrato.js",
+            "description": "Revisa contrato existente",
+            "category": "judicial",
+            "values": {
+                "parametro": "valor"
+            },
+            "params": [
+                {
+                    "name": "parametro",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Parâmetro principal"
+                }
+            ]        },
+        "verificarConformidade": {
+            "script": "dist/verificarConformidade.js",
+            "description": "Verifica conformidade do contrato com normas",
+            "category": "judicial",            
+            "values": {
+                "parametro": "valor"
+            },
+            "params": [
+                {
+                    "name": "parametro",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Parâmetro principal"
+                }
+            ]        }    },
+    "config": {
+        "timeout": 60000,
+        "max_retries": 3,
+        "cache_ttl": 3600
+    },
+    "mcp": true
+}
