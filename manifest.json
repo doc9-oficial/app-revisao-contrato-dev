@@ -9,7 +9,8 @@
             "footer": "As credenciais são armazenadas com segurança.",
             "link": ""
         },
-        "params": [            {
+        "params": [
+            {
                 "name": "whomToken",
                 "type": "string",
                 "inputType": "text",
@@ -22,7 +23,7 @@
                 "inputType": "text",
                 "required": true,
                 "label": "ID da Extensão do Whom"
-            }        
+            }
         ]
     },
     "functions": {
@@ -33,21 +34,11 @@
             "values": {
                 "parametro": "valor"
             },
-            "params": [
-                {
-                    "name": "parametro",
-                    "type": "string",
-                    "inputType": "text",
-                    "required": true,
-                    "label": "Parâmetro principal"
-                }
-            ]        },
-        "verificarConformidade": {
-            "script": "dist/verificarConformidade.js",
-            "description": "Verifica conformidade do contrato com normas",
-            "category": "judicial",            
-            "values": {
-                "parametro": "valor"
+            "help": {
+                "title": "Como usar a função revisarContrato",
+                "body": "Use esta função para revisar um contrato existente, destacando inconsistências e sugerindo melhorias. Forneça o parâmetro necessário para especificar o contrato a ser revisado.",
+                "footer": "",
+                "link": ""
             },
             "params": [
                 {
@@ -57,7 +48,32 @@
                     "required": true,
                     "label": "Parâmetro principal"
                 }
-            ]        }    },
+            ]
+        },
+        "verificarConformidade": {
+            "script": "dist/verificarConformidade.js",
+            "description": "Verifica conformidade do contrato com normas",
+            "category": "judicial",
+            "values": {
+                "parametro": "valor"
+            },
+            "help": {
+                "title": "Como usar a função verificarConformidade",
+                "body": "Use esta função para verificar a conformidade de um contrato com normas e regulamentos aplicáveis. Forneça o parâmetro necessário para especificar o contrato a ser verificado.",
+                "footer": "",
+                "link": ""
+            },
+            "params": [
+                {
+                    "name": "parametro",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Parâmetro principal"
+                }
+            ]
+        }
+    },
     "config": {
         "timeout": 60000,
         "max_retries": 3,
