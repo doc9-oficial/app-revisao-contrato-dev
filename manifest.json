@@ -28,6 +28,7 @@
     },
     "functions": {
         "revisarContrato": {
+            "name": "Revisar Contrato - Which AI",
             "script": "dist/revisarContrato.js",
             "description": "Revisa contrato existente",
             "category": "judicial",
@@ -51,6 +52,7 @@
             ]
         },
         "verificarConformidade": {
+            "name": "Verificar Conformidade - Which AI",
             "script": "dist/verificarConformidade.js",
             "description": "Verifica conformidade do contrato com normas",
             "category": "judicial",
